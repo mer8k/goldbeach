@@ -11,6 +11,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  // Load background videos only when they approach the viewport.
+  const lazyVideos = document.querySelectorAll('.lazy-video');
+  const loadVideo = (video) => {
+    video.querySelectorAll('source[data-src]').forEach(source => {
+      source.src = source.dataset.src;
+      source.removeAttribute('data-src');
+    });
+    video.load();
+    video.play().catch(() => {});
+  };
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadVideo(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '300px 0px' });
+    lazyVideos.forEach(video => videoObserver.observe(video));
+  } else {
+    lazyVideos.forEach(loadVideo);
+  }
   // Menu Tab Switching Logic
   const menuTabs = document.querySelectorAll('.menu-tab');
   const menuLists = document.querySelectorAll('.menu-list');

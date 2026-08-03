@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gold Beach - Şile Ayazma Plajı</title>
+    <link rel="preload" as="image" href="/optimized/hero.jpeg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonts: Oswald for Logo/Nav, Courier Prime for Address (to match reference perfectly) -->
@@ -52,7 +53,7 @@
 
     <main>
       <section class="hero-section">
-        <div class="hero-image" style="background-image: url('/hero.jpeg');"></div>
+        <div class="hero-image" role="img" aria-label="Gold Beach sahili" style="background-image: url('/optimized/hero.jpeg');"></div>
         
         <aside class="sidebar-offer">
           <div class="sidebar-header">
@@ -60,14 +61,14 @@
             <span class="sidebar-title">HABERLER + FIRSATLAR</span>
           </div>
           <div class="sidebar-content">
-            <img src="/4.jpeg" alt="Yaz Fırsatları" class="offer-image">
+            <img src="/optimized/4.jpeg" loading="lazy" decoding="async" alt="Yaz Fırsatları" class="offer-image">
             <h2 class="offer-heading">YAZ FIRSATLARI</h2>
             <p class="offer-text">HAFTA İÇİ PLAJ GİRİŞLERİNDE VE RESTORAN HARCAMALARINDA %20'YE VARAN İNDİRİM. 17 HAZİRAN - 27 AĞUSTOS ARASINDA GEÇERLİDİR.</p>
             <a href="https://wa.me/905326545133" target="_blank" class="book-now-btn">BİLGİ AL</a>
           </div>
         </aside>
       </section>
-      <section class="beach-section" id="plaj"><video autoplay loop muted playsinline class="beach-video"><source src="/localar.mp4" type="video/mp4"></video><div class="beach-shade"></div><div class="beach-content"><h2>GÜN SENİN.<br>RİTMİ SEN SEÇ.</h2><div class="beach-details"><p>Konforlu şezlonglar, özel localar ve gün boyu masanıza ulaşan servis. Gold Beach'te ihtiyacınız olan tek şey güneşe ayıracağınız zaman.</p><a href="https://wa.me/905326545133" target="_blank" rel="noopener" class="light-cta">PLAJ İÇİN YERİNİ AYIR <span>→</span></a></div></div><div class="beach-services"><span>01 &nbsp; ÖZEL LOCA</span><span>02 &nbsp; ŞEZLONG</span><span>03 &nbsp; MASAYA SERVİS</span><span>04 &nbsp; DUŞ & SOYUNMA</span></div></section>
+      <section class="beach-section" id="plaj"><video autoplay loop muted playsinline preload="none" poster="/optimized/hero.jpeg" class="beach-video lazy-video"><source data-src="/localar.mp4" type="video/mp4"></video><div class="beach-shade"></div><div class="beach-content"><h2>GÜN SENİN.<br>RİTMİ SEN SEÇ.</h2><div class="beach-details"><p>Konforlu şezlonglar, özel localar ve gün boyu masanıza ulaşan servis. Gold Beach'te ihtiyacınız olan tek şey güneşe ayıracağınız zaman.</p><a href="https://wa.me/905326545133" target="_blank" rel="noopener" class="light-cta">PLAJ İÇİN YERİNİ AYIR <span>→</span></a></div></div><div class="beach-services"><span>01 &nbsp; ÖZEL LOCA</span><span>02 &nbsp; ŞEZLONG</span><span>03 &nbsp; MASAYA SERVİS</span><span>04 &nbsp; DUŞ & SOYUNMA</span></div></section>
       <!-- 4 Column Features Section -->
       <section class="features-section" id="kesfet">
         <div class="features-grid">
@@ -75,7 +76,7 @@
           <!-- Feature 1 -->
           <article class="feature-item">
             <div class="feature-img-wrapper">
-              <img src="/f1.jpeg" alt="Güneş & Kum">
+              <img src="/optimized/f1.jpeg" loading="lazy" decoding="async" alt="Güneş & Kum">
             </div>
             <div class="feature-text">
               <h3>GÜNEŞ & KUM</h3>
@@ -87,7 +88,7 @@
           <!-- Feature 2 -->
           <article class="feature-item">
             <div class="feature-img-wrapper">
-              <img src="/f2.jpeg" alt="Gurme Lezzetler">
+              <img src="/optimized/f2.jpeg" loading="lazy" decoding="async" alt="Gurme Lezzetler">
             </div>
             <div class="feature-text">
               <h3>GURME LEZZETLER</h3>
@@ -99,7 +100,7 @@
           <!-- Feature 3 -->
           <article class="feature-item">
             <div class="feature-img-wrapper">
-              <img src="/f3.jpeg" alt="Günbatımı Partileri">
+              <img src="/optimized/f3.jpeg" loading="lazy" decoding="async" alt="Günbatımı Partileri">
             </div>
             <div class="feature-text">
               <h3>GÜNBATIMI PARTİLERİ</h3>
@@ -111,7 +112,7 @@
           <!-- Feature 4 -->
           <article class="feature-item">
             <div class="feature-img-wrapper">
-              <img src="/f4.jpeg" alt="VIP Deneyim">
+              <img src="/optimized/f4.jpeg" loading="lazy" decoding="async" alt="VIP Deneyim">
             </div>
             <div class="feature-text">
               <h3>VIP DENEYİM</h3>
@@ -127,7 +128,7 @@
       <section class="menu-section" id="restoran">
         <div class="menu-container">
           <div class="menu-image">
-            <img src="/menu_bg.jpeg" alt="Gold Beach Restoran Menü">
+            <img src="/optimized/menu_bg.jpeg" loading="lazy" decoding="async" alt="Gold Beach Restoran Menü">
           </div>
           <div class="menu-content-area">
             <div class="menu-header">
@@ -241,10 +242,10 @@
         </div>
       </section>
 
-      <section class="gallery-section" id="galeri"><div class="gallery-heading"><div><h2>GOLDEN<br><em>MOMENTS.</em></h2></div><p>Deniz tuzu, güneş ışığı ve uzun yaz akşamları. Gold Beach'ten kareler.</p></div><div class="gallery-grid"><figure class="gallery-card gallery-card-wide"><img src="/gorsel3.jpeg" alt="Gold Beach manzarası" loading="lazy"></figure><figure class="gallery-card gallery-card-tall"><img src="/gorsel4.jpeg" alt="Gold Beach plaj deneyimi" loading="lazy"></figure><figure class="gallery-card"><img src="/gorsel5.jpeg" alt="Gold Beach yaz atmosferi" loading="lazy"></figure><figure class="gallery-card"><img src="/gorsel2.jpeg" alt="Gold Beach detay" loading="lazy"></figure><figure class="gallery-card gallery-card-wide"><img src="/gorsel1.jpeg" alt="Ayazma Plajı Gold Beach" loading="lazy"></figure></div></section>
+      <section class="gallery-section" id="galeri"><div class="gallery-heading"><div><h2>GOLDEN<br><em>MOMENTS.</em></h2></div><p>Deniz tuzu, güneş ışığı ve uzun yaz akşamları. Gold Beach'ten kareler.</p></div><div class="gallery-grid"><figure class="gallery-card gallery-card-wide"><img src="/optimized/gorsel3.jpeg" alt="Gold Beach manzarası" loading="lazy" decoding="async"></figure><figure class="gallery-card gallery-card-tall"><img src="/optimized/gorsel4.jpeg" alt="Gold Beach plaj deneyimi" loading="lazy" decoding="async"></figure><figure class="gallery-card"><img src="/optimized/gorsel5.jpeg" alt="Gold Beach yaz atmosferi" loading="lazy" decoding="async"></figure><figure class="gallery-card"><img src="/optimized/gorsel2.jpeg" alt="Gold Beach detay" loading="lazy" decoding="async"></figure><figure class="gallery-card gallery-card-wide"><img src="/optimized/gorsel1.jpeg" alt="Ayazma Plajı Gold Beach" loading="lazy" decoding="async"></figure></div></section>
       <section class="location-section" id="konum">
         <div class="location-visual">
-          <img src="/hero.jpeg" alt="Gold Beach Ayazma Plajı, Şile" loading="lazy">
+          <img src="/optimized/hero.jpeg" alt="Gold Beach Ayazma Plajı, Şile" loading="lazy" decoding="async">
           <div class="location-visual-copy"><span>AYAZMA PLAJI</span><strong>ŞİLE</strong></div>
         </div>
         <div class="location-content">
@@ -258,8 +259,8 @@
       </section>
       <!-- Reviews Section -->
       <section class="reviews-section" id="yorumlar">
-        <video autoplay loop muted playsinline class="reviews-video">
-          <source src="/genelguzelvideo.mp4" type="video/mp4">
+        <video autoplay loop muted playsinline preload="none" poster="/optimized/kapanis.jpeg" class="reviews-video lazy-video">
+          <source data-src="/genelguzelvideo.mp4" type="video/mp4">
         </video>
         <div class="reviews-overlay"></div>
         
