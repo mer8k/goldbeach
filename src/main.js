@@ -2,6 +2,19 @@ import './style.css'
 
 // Add any interactions like the close button for the floating box
 document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header');
+  const syncHeaderHeight = () => {
+    if (header) {
+      document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+    }
+  };
+
+  syncHeaderHeight();
+  window.addEventListener('resize', syncHeaderHeight, { passive: true });
+  if (header && 'ResizeObserver' in window) {
+    new ResizeObserver(syncHeaderHeight).observe(header);
+  }
+
   const closeBtn = document.querySelector('.close-btn');
   const floatingBox = document.querySelector('.sidebar-offer');
   
